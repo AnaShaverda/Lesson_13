@@ -667,6 +667,26 @@
       margin-top: 40rem;
     }
   }
+
+  @media (max-width:700px) {
+   .stepIcon{
+    display: none;
+   }
+   .careerCardContainer{
+    display: block;
+   }
+   .careerBtns{
+   flex-direction: column;
+   }
+   .careerCard{
+    padding:2rem;
+   }
+   .career{
+    max-width: 100%;
+   }
+  }
+
+
   
   .hidden {
     display: none; 
