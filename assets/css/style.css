@@ -35,21 +35,22 @@
     overflow-x: none;
   }
   
-  .greeting {
+  .welcome {
    display: flex;
    flex-direction: column;
    margin-bottom: 20px;
    align-items: center;
+   flex-wrap: wrap;
   }
   
-  .greeting__title {
+  .welcomeTitle {
     text-align: left;
     color: #fff;
-    font-size: 5rem;
+    font-size: 40px;
     font-weight: 600;
   }
   
-  .greeting__txt {
+  .welcomePar {
     text-align: left;
     color: #ccc;
     font-size: 3rem;
@@ -57,7 +58,7 @@
     max-width: 120rem;
   }
   
-  .career__card-title {
+  .careerCardTitle {
     color: #fff;
     font-size: 2rem;
   }
@@ -131,13 +132,13 @@
     justify-content: center;
   }
   
-  .career__cards {
+  .careerCards {
     display: flex;
     flex-direction: row;
     gap: 2rem;
   }
   
-  .career__card {
+  .careerCard{
     flex: 1;
     background-color: #ccd4ff0d;
     border-radius: 2rem;
@@ -148,13 +149,13 @@
     gap: 3rem;
   }
   
-  .career__card-container {
+  .careerCardContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
   
-  .career__card-icon{
+  .careerCardIcon{
     font-size: 2rem;
     border:2px solid #CCD4FF1C;
     background: linear-gradient(0deg, #FF3C8E 0%, #A400F1 100%);
@@ -185,30 +186,30 @@
     margin-right: -30px;
     background: linear-gradient(180deg, #0057FF 0%, #00C1DB 100%);
   }
-  .career__card-icon-blue{
+  .careerCard-icon-blue{
     font-size: 2rem;
     background: linear-gradient(180deg, #0057FF 0%, #00C1DB 100%);
     border-radius: 50%;
     padding: 20px;
   }
   
-  .career__card-title {
+  .careerCardTitle {
     font-size: 4.4rem;
     font-weight: 600;
   }
   
-  .career__card-txt {
+  .careerCardPar {
     font-size: 2rem;
     font-weight: 400;
     color: #e5eaff73;
   }
   
-  .career__btns {
+  .careerBtns {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-  .career__btn{
+  .careerBtn{
     color: white;
     border: none;
     background-color: inherit;
@@ -230,16 +231,16 @@
     column-gap: 2rem;
   }
   
-  .step__title {
+  .stepTitle {
     font-size: 2rem;
   }
   
-  .step__txt {
+  .stepPar {
     font-size: 1.6rem;
     color: #e5eaff73;
   }
   
-  .step__icon {
+  .stepIcon {
     font-size: 2rem;
     color: linear-gradient(0deg, #FF3C8E 0%, #A400F1 100%);
     border-radius: 50%;
@@ -319,41 +320,6 @@
     box-shadow: 0px 0px 20px rgba(0, 255, 64, 0.5);
   }
   
-  @media (max-width: 75em) {
-    .menu__btn {
-      display: block;
-    }
-    .header__menu {
-      display: none;
-      position: absolute;
-      top: 8rem;
-    }
-    .menu__btn:hover + .header__menu,
-    .header__menu:hover {
-      display: block;
-    }
-    .menu__btn {
-      position: relative;
-    }
-    .header__menu > .header__nav-item {
-      margin-bottom: 3rem;
-    }
-    .greeting__txt{
-      max-width:60%;
-      font-size: 3rem;
-      margin-left: 40px;
-    }
-    .greeting__title{
-      max-width:50%;
-      font-size: 4rem;
-      margin-left: 40px;
-    }
-    .hero__title{
-      font-size: 3rem;
-      max-width:60%;
-      margin-left: 40px;
-    }
-  }
   
   .navigation__checkbox {
     display: none;
@@ -421,6 +387,7 @@
     background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
     background-size: 250%;
     transition: all 0.4s;
+    text-align: left;
   }
   
   .navigation__link:hover,
@@ -493,6 +460,7 @@
   .hero {
     width: 100vw;
     height: 70vh;
+    position: relative;
   }
   
   .hero__content {
@@ -610,36 +578,93 @@
     
   }
 
+  @media (max-width:1200) {
+    .menu__btn {
+      display: block;
+    }
+    .header__menu {
+      display: none;
+      position: absolute;
+      top: 8rem;
+    }
+    .menu__btn:hover + .header__menu,
+    .header__menu:hover {
+      display: block;
+    }
+    .menu__btn {
+      position: relative;
+    }
+    .header__menu > .header__nav-item {
+      margin-bottom: 3rem;
+    }
+    .welcomePar{
+      font-size: 3rem;
+      margin-left: 40px;
+    }
+    .welcomeTitle{
+      font-size: 4rem;
+      margin-left: 40px;
+    }
+    .hero__title{
+      font-size: 3rem;
+      max-width:60%;
+      margin-left: 40px;
+    }
+  }
+  
+
   
   @media (max-width:1000px) {
     .header {
       display: none;
     }
-      .career__cards {
+      .careerCards {
     display: flex;
     flex-direction: column;
     gap: 2rem;
    
-  } .greeting__title{
+  } .welcomeTitle{
      margin-left: 50px;
-    font-size: 3rem;
-    max-width: 50%;
+     font-size: 3rem;
+  
     }
-    .greeting__txt{
+    .welcomePar{
       font-size: 2rem;
-      max-width: 50%;
     }
-    .header__logo {
+    .headerLogo {
       padding: 4rem 2rem;
       max-width: 23rem;
     }
     
     .hero__txt {
       font-size: 1.6rem;
+      flex-wrap: wrap;
     }
     
     .hero__video-background video {
       padding: 0 2rem;
+    }
+    #carousel-paragraph{
+      font-size: 3rem;
+    }
+    .hero__content {
+      position: static;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      margin-top: 10rem;
+      text-align: left;
+      margin-left: 2rem;
+    }
+    .hero__title{
+      font-size: 3rem !important;
+    }
+    .hero__btn{
+      padding: 10px;
+    }
+    .companies{
+      margin-top: 40rem;
     }
   }
   
