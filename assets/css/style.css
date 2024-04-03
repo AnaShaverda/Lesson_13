@@ -599,7 +599,7 @@ margin-top: 2rem;
     flex: 1;
     margin-right: 20px;
   }
-ul{
+.ul{
   list-style-type: none;
 }
   .column:last-child {
